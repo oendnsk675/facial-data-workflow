@@ -46,8 +46,8 @@ def load_frames_to_folder(output_dir):
     return output_dir
 
 with DAG(dag_id='video_etl', default_args=default_args, schedule_interval='@daily') as dag:
-    filename = "happy.mp4"
-    data_type = "happy"
+    filename = "angry.mp4"
+    data_type = "angry"
     data_source = f"./data/raw/{filename}"
     data_dest = f"./data/transformed/{data_type}"
     
